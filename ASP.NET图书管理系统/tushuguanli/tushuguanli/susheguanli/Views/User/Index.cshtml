@@ -1,0 +1,30 @@
+﻿@model IQueryable<susheguanli.Models.User>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Form - jQuery EasyUI Demo</title>
+    <link rel="stylesheet" type="text/css" href="~/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/themes/icon.css">
+    <script type="text/javascript" src="~/Scripts/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.easyui.min.js"></script>
+</head>
+<body>
+    <center>
+	<h2>当前用户</h2>
+	<div id="d">
+    @Html.Partial("xianshiuser", Model)
+</div>
+        
+	<script>
+	    function submitForm() {
+	        $('#ff').form('submit');
+	    }
+	    function clearForm() {
+	        $('#ff').form('clear');
+	    }
+	</script>
+    </center>
+</body>
+</html>

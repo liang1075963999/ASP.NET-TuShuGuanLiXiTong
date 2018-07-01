@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tushuguanliModelStoreContainer" CdmEntityContainer="tushuguanliEntities">
+    <EntitySetMapping Name="Book">
+      <EntityTypeMapping TypeName="tushuguanliModel.Book">
+        <MappingFragment StoreEntitySet="Book">
+          <ScalarProperty Name="shuhao" ColumnName="shuhao" />
+          <ScalarProperty Name="shuming" ColumnName="shuming" />
+          <ScalarProperty Name="jiaqian" ColumnName="jiaqian" />
+          <ScalarProperty Name="zuozhe" ColumnName="zuozhe" />
+          <ScalarProperty Name="zaiguanceshu" ColumnName="zaiguanceshu" />
+          <ScalarProperty Name="neirongjianjie" ColumnName="neirongjianjie" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HuanShu">
+      <EntityTypeMapping TypeName="tushuguanliModel.HuanShu">
+        <MappingFragment StoreEntitySet="HuanShu">
+          <ScalarProperty Name="shuhao" ColumnName="shuhao" />
+          <ScalarProperty Name="shuming" ColumnName="shuming" />
+          <ScalarProperty Name="huanshurenxuehao" ColumnName="huanshurenxuehao" />
+          <ScalarProperty Name="huanshurenname" ColumnName="huanshurenname" />
+          <ScalarProperty Name="huanshurendate" ColumnName="huanshurendate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JieShu">
+      <EntityTypeMapping TypeName="tushuguanliModel.JieShu">
+        <MappingFragment StoreEntitySet="JieShu">
+          <ScalarProperty Name="shuhao" ColumnName="shuhao" />
+          <ScalarProperty Name="shuming" ColumnName="shuming" />
+          <ScalarProperty Name="jieshurenxuehao" ColumnName="jieshurenxuehao" />
+          <ScalarProperty Name="jieshurenname" ColumnName="jieshurenname" />
+          <ScalarProperty Name="jieshudate" ColumnName="jieshudate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="tushuguanliModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="userbianhao" ColumnName="userbianhao" />
+          <ScalarProperty Name="password" ColumnName="password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

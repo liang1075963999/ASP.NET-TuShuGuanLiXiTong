@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/login.css" rel="stylesheet" />
+    <script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.easyui.min.js"></script>
+
+    <title>欢迎登陆图书管理系统</title>
+</head>
+<body>
+    <script type="text/javascript" color="0,255,0" opacity='0.7' zindex="-2" count="100" src="/Scripts/canvas-nest.min.js"></script>
+    <div id="title">
+        <span>欢迎登录图书管理系统</span>
+    </div>
+    <div id="main">
+        <form id="ff" method="post">
+            <input type="text" name="account" placeholder="请输入账号" />
+            <input type="password" name="password" placeholder="请输入密码" />
+        </form>
+        <div style="text-align: center; padding: 5px 0">
+            <a id="zhuce" href="@Url.Action("Index", "ZhuCe", "")" class="easyui-linkbutton" style="width:80px;">注册</a>
+        </div>
+        <div style="text-align: center; padding: 5px 0; float: right; margin-top: -50px; margin-right: 12px">
+            <a id="chaxun" href="@Url.Action("Index", "Home", "")" class="easyui-linkbutton" onclick="submitForm()" style="width:80px;">登录</a>
+        </div>
+    </div>
+    <script>
+        function submitForm() {
+            $('#ff').form('submit');
+        }
+    </script>
+
+</body>
+</html>

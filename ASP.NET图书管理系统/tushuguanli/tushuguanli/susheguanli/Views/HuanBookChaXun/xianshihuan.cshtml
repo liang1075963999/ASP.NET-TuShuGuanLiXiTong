@@ -1,0 +1,25 @@
+﻿@model IQueryable<susheguanli.Models.HuanShu>
+
+<table border="1" style="width: 400px; border-collapse: collapse">
+    <tr>
+        <td style="text-align: center; font-size: 10px">书号</td>
+        <td style="text-align: center; font-size: 10px">书名</td>
+        <td style="text-align: center; font-size: 10px">还书人学号</td>
+        <td style="text-align: center; font-size: 10px">还书人姓名</td>
+        <td style="text-align: center; font-size: 10px">还书日期</td>
+    </tr>
+    @{
+        foreach (var dange in Model)
+        {
+           
+       
+        <tr>
+            <td style="font-size: 10px">@dange.shuhao</td>
+            <td style="font-size: 10px">@dange.shuming</td>
+            <td style="font-size: 10px">@dange.huanshurenxuehao</td>
+            <td style="font-size: 10px">@dange.huanshurenname</td>
+            <td style="font-size: 10px">@dange.huanshurendate</td>
+        </tr>
+        }
+    }
+</table>

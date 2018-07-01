@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>图书管理系统</title>
+    <link rel="stylesheet" type="text/css" href="~/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="~/themes/icon.css">
+    <script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.easyui.min.js"></script>
+</head>
+<body class="easyui-layout">
+    <div data-options="region:'north',border:false" style="height: 60px; background: #B3DFDA; padding: 10px; font-size: 30px; font-weight: 700; text-align: center">图书管理系统</div>
+    <div data-options="region:'west',split:true,title:'菜单'" style="width: 180px; padding: 10px;">
+        <ul id="tt1" class="easyui-tree" animate="true" dnd="true">
+            <li><span>图书管理系统</span>
+                <ul>
+                    <li><span>图书管理</span>
+                        <ul>
+                            <li><span><a target="ifrmList" href="@Url.Action("Index", "Book", "")">图书录入</a></span> </li>
+                            <li><span><a target="ifrmList" href="@Url.Action("Index", "DownBook", "")">图书下架</a></span> </li>
+                            <li><span><a target="ifrmList" href="@Url.Action("Index", "ChaXun", "")">图书查询</a></span> </li>
+                            <li><span><a target="ifrmList" href="@Url.Action("Index", "XiuGai", "")">图书修改</a></span> </li>
+                        </ul>
+                    </li>
+
+                    <li state="closed"><span>借还书管理</span>
+                        <ul>
+                            <li><span><a target="ifrmList" href="@Url.Action("Index", "JieBook", "")">借书登记</a></span> </li>
+                            <li><span><a target="ifrmList" href="@Url.Action("Index", "HuanBook", "")">还书登记</a></span> </li>
+                            <li><span><a target="ifrmList" href="@Url.Action("Index", "JieBookChaXun", "")">借书查询</a></span> </li>
+                            <li><span><a target="ifrmList" href="@Url.Action("Index", "HuanBookChaXun", "")">还书查询</a></span> </li>
+                        </ul>
+                    </li>
+                    <li state="closed"><span>系统管理</span>
+                        <ul>
+                            <li><span><a target="ifrmList" href="@Url.Action("Index", "User", "")">当前用户</a></span> </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div data-options="region:'south',border:false" style="height: 50px; background: #A9FACD; padding: 10px;"><marquee>谢谢使用</marquee></div>
+    <div data-options="region:'center',title:'欢迎使用'">
+        <div title="" style="padding: 0px; overflow: hidden; height: 100%" id="home">
+            <iframe id="ifrmList" name="ifrmList" scrolling="OVERFLOW-Y" frameborder="0" height="608px"
+                    width="99.9%" src="@Url.Action("Index", "TuPian", "")"></iframe>
+        </div>
+    </div>
+</body>
+</html>

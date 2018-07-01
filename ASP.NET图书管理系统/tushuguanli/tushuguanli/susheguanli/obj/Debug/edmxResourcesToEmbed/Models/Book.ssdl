@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tushuguanliModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="tushuguanliModelStoreContainer">
+    <EntitySet Name="Book" EntityType="tushuguanliModel.Store.Book" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HuanShu" EntityType="tushuguanliModel.Store.HuanShu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JieShu" EntityType="tushuguanliModel.Store.JieShu" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="User" EntityType="tushuguanliModel.Store.User" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="shuhao" />
+    </Key>
+    <Property Name="shuhao" Type="int" Nullable="false" />
+    <Property Name="shuming" Type="nchar" Nullable="false" MaxLength="20" />
+    <Property Name="jiaqian" Type="float" />
+    <Property Name="zuozhe" Type="nchar" MaxLength="10" />
+    <Property Name="zaiguanceshu" Type="nchar" MaxLength="10" />
+    <Property Name="neirongjianjie" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="HuanShu">
+    <Key>
+      <PropertyRef Name="shuhao" />
+    </Key>
+    <Property Name="shuhao" Type="int" Nullable="false" />
+    <Property Name="shuming" Type="nchar" MaxLength="20" />
+    <Property Name="huanshurenxuehao" Type="int" Nullable="false" />
+    <Property Name="huanshurenname" Type="nchar" MaxLength="10" />
+    <Property Name="huanshurendate" Type="nchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="JieShu">
+    <Key>
+      <PropertyRef Name="shuhao" />
+    </Key>
+    <Property Name="shuhao" Type="int" Nullable="false" />
+    <Property Name="shuming" Type="nchar" MaxLength="20" />
+    <Property Name="jieshurenxuehao" Type="int" Nullable="false" />
+    <Property Name="jieshurenname" Type="nchar" MaxLength="10" />
+    <Property Name="jieshudate" Type="nchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="userbianhao" />
+    </Key>
+    <Property Name="userbianhao" Type="int" Nullable="false" />
+    <Property Name="password" Type="nchar" MaxLength="20" />
+  </EntityType>
+</Schema>

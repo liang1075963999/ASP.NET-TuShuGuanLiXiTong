@@ -1,0 +1,27 @@
+﻿@model IQueryable<susheguanli.Models.Book>
+
+<table border="1" style="width: 400px; border-collapse: collapse">
+    <tr>
+        <td style="text-align: center; font-size: 10px">书号</td>
+        <td style="text-align: center; font-size: 10px">书名</td>
+        <td style="text-align: center; font-size: 10px">价钱</td>
+        <td style="text-align: center; font-size: 10px">作者</td>
+        <td style="text-align: center; font-size: 10px">在馆册数</td>
+        <td style="text-align: center; font-size: 10px">内容简介</td>
+    </tr>
+    @{
+        foreach (var dange in Model)
+        {
+           
+       
+        <tr>
+            <td style="font-size: 10px">@dange.shuhao</td>
+            <td style="font-size: 10px">@dange.shuming</td>
+            <td style="font-size: 10px">@dange.jiaqian</td>
+            <td style="font-size: 10px">@dange.zuozhe</td>
+            <td style="font-size: 10px">@dange.zaiguanceshu</td>
+            <td style="font-size: 10px">@dange.neirongjianjie</td>
+        </tr>
+        }
+    }
+</table>
